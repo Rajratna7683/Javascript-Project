@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=http://127.0.0.1:5500/index.html, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        img{
+            width: 200px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+        button{
+            margin-inline: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            outline: none;
+            border: none;
+            background-color: green;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bulb <span></span></h1>
+        <img src="of.png" alt="" id="img">
+        <div class="btn">
+            <button id="of" onclick="btnOf()">OF</button>
+            <button id="on" onclick="btnOn()">ON</button>
+        </div>
+    </div>
+
+    <script>
+        function btnOn(){
+            document.getElementById("img").src="on.png"
+            document.getElementById("on").style.background="yellow"
+            document.querySelector("span").textContent="is On"
+            document.getElementById("of").style.background="green"
+        }
+
+        function btnOf(){
+            document.querySelector("img").src="of.png"
+            document.getElementById("of").style.background="yellow"
+            document.getElementById("on").style.background="green"
+            document.querySelector("span").textContent="is Of"
+        }
+    </script>
+</body>
+</html>
